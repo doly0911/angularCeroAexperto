@@ -4,11 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-resultados',
   templateUrl: './resultados.component.html'
 })
-export class ResultadosComponent implements OnInit {
+export class ResultadosComponent {
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }
