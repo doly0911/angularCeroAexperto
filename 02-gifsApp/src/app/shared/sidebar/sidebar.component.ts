@@ -7,12 +7,16 @@ import { GifsService } from '../../gifs/services/gifs.service';
 })
 export class SidebarComponent{
 
-  constructor(private giftsService: GifsService) { }
-
-  //Debe llamarse igual que el get del servicio
-  get historial(){
+   //Debe llamarse igual que el get del servicio
+   get historial(){
     return this.giftsService.historial
+  }
 
+  constructor(private giftsService: GifsService) {}
+
+
+  buscar(nombreGif: string){
+    this.giftsService.buscarGift(nombreGif)
   }
 
 
