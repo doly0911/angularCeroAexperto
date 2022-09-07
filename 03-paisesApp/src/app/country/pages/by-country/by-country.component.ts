@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-by-country',
-  templateUrl: './by-country.component.html',
-  styleUrls: ['./by-country.component.css']
+  templateUrl: './by-country.component.html'
 })
-export class ByCountryComponent implements OnInit {
+export class ByCountryComponent{
+  termino: string = "";
 
   constructor() { }
+  buscar() {
+    console.log(this.termino);
 
-  ngOnInit(): void {
   }
-
 }
