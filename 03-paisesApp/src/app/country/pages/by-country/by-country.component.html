@@ -13,11 +13,12 @@
 </div>
 <hr>
 
-<div class="alert alert-danger">
-  No se encontró nada con el término ABSDS
+<div class="alert alert-danger"
+*ngIf="hayError">
+  No se encontró nada con el término {{termino}}
 </div>
 
-<div class="row">
+<div *ngIf="listaDePaises.length > 0" class="row">
   <div class="col">
     <table class="table">
       <thead>
@@ -30,13 +31,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-        <td>1</td>
-        <td>bandera</td>
-        <td>nombre</td>
-        <td>15900800</td>
+        <tr *ngFor="let pais of listaDePaises; let i = index">
+        <td>{{i}}</td>
         <td>
-          <a href="#">Ver...</a>
+          <img [src]="pais.flags.png" class="small-flag">
+        </td>
+        <td>{{pais.name}}</td>
+        <td>{{pais.population | number}}</td>
+        <td>
+          <a [routerLink]="['/seeCountry', pais.alpha2Code]">Ver...</a>
         </td>
       </tr>
       </tbody>
