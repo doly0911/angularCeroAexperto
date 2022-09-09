@@ -15,10 +15,10 @@ export class ByCountryComponent{
 
   constructor(private countryService: CountryService) { }
 
-  buscar() {
+  buscar(valor:string) {
     this.hayError = false;
-    console.log(this.termino);
-    this.countryService.buscarPais(this.termino)
+    this.termino = valor
+    this.countryService.buscarPais(valor)
     .subscribe((resp) => {
       console.log(resp);
       this.listaDePaises= resp
