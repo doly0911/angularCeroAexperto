@@ -27,4 +27,10 @@ export class ByCountryComponent{
       this.listaDePaises=[];
     });
   }
+
+  teclaPresionada(valor:string){
+    this.hayError = false;
+    // TODO: Falta implementar
+
+  }
 }
