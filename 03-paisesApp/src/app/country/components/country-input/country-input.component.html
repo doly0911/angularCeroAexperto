@@ -2,7 +2,7 @@
   <input type="text"
           name="termino"
          [(ngModel)]="termino"
-         placeholder="Buscar país..."
+         [placeholder]="placeholderValue"
          (input)="sugerencias()"
          class="form-control">
 </form>
