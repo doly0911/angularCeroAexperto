@@ -28,6 +28,11 @@ export class CountryService {
     return this.http.get<Country[]>(url);
   }
 
+  buscarPorCodigo(codigo: string): Observable<Country> {
+    const url: string = `${this.baseUrl}/alpha/${codigo}`;
+    return this.http.get<Country>(url)
+  }
+
 
 
 
