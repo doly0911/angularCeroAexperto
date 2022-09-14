@@ -36,8 +36,6 @@ export class ByRegionComponent  {
     this.listaDepaises = []
     this.countryService.buscarPorRegion(region).subscribe(
       paises => {
-        console.log("paises: ", paises);
-
         this.listaDepaises = paises
       }
     )
