@@ -41,7 +41,6 @@ export class CountryInputComponent implements OnInit{
 
   // TO DO cambiar el tipo de valor
   sugerencias(){
-    console.log("desde sugerenicas con Next:", this.termino);
     //capturar cada valor ingresado del usuario
     this.debouncer.next(this.termino)
   }

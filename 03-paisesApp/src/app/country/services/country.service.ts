@@ -10,6 +10,7 @@ export class CountryService {
 
   private baseUrl: string = 'https://restcountries.com/v2'
 
+
   constructor(private http: HttpClient) { }
 
   buscarPais(termino: string): Observable<Country[]> {
@@ -31,6 +32,11 @@ export class CountryService {
   buscarPorCodigo(codigo: string): Observable<Country> {
     const url: string = `${this.baseUrl}/alpha/${codigo}`;
     return this.http.get<Country>(url)
+  }
+
+  buscarPorRegion(region:string): Observable<Country[]>{
+    const url: string = `${this.baseUrl}/regionalbloc/${region}`;
+    return this.http.get<Country[]>(url)
   }
 
 

@@ -1,1 +1,19 @@
-<p>by-region works!</p>
+<h2>Por Region <small>{{regionActive}}</small></h2>
+
+<div class="row">
+  <div class="col">
+    <button
+    *ngFor="let region of regiones"
+    (click)="activarRegion(region)"
+    [class]="getClaseCSS(region)"
+    >
+    {{region | titlecase}}
+    </button>
+  </div>
+</div>
+
+<div *ngIf="listaDepaises.length > 0" class="row">
+  <div class="col">
+    <app-country-table [countryList]="listaDepaises"></app-country-table>
+  </div>
+</div>
