@@ -4,11 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-basicos',
   templateUrl: './basicos.component.html'
 })
-export class BasicosComponent implements OnInit {
+export class BasicosComponent {
 
-  constructor() { }
+  uppercase: string = "DOLY"
+  lowercase: string = "doly"
+  nameComplete: string = "dOly JimenEZ"
 
-  ngOnInit(): void {
-  }
+  fecha: Date = new Date()
 
 }
