@@ -35,6 +35,7 @@
         <li> fecha | date: 'short'  </li>
         <li> fecha | date: 'long'  </li>
         <li>Hoy es: | date:'EEEE - MMM dd, YYYY - hh:mm a'</li>
+        <li> Cambiar el timezone es el tercer argumento 'en'--> fecha | date: 'long': '' : 'en' </li>
       </ul>
 
     </p-card>
@@ -47,6 +48,7 @@
         <li> {{fecha | date: 'short' }}</li>
         <li> {{fecha | date: 'long' }}</li>
         <li> Hoy es: {{fecha | date:'EEEE - MMM dd, YYYY - hh:mm a'}}</li>
+        <li> {{fecha | date: 'long': '' : 'en' }}</li>
       </ul>
     </p-card>
   </div>
