@@ -1,0 +1,48 @@
+<div class="text-layout">
+  <h1>Pipes no tan comunes</h1>
+  <p>Pipes incluidos en Angular - Usualmente en el Common Module</p>
+</div>
+
+<div class="grid">
+  <div class="col md-6">
+    <p-fieldset legend="I18nSelect" [toggleable]="true">
+      <p>
+        Saludos {{ nombre }}, es un placer
+        {{ genero | i18nSelect: generoMap }} a nuestro evento.
+      </p>
+      <button
+        pButton
+        type="button"
+        label="Cambiar nombre"
+        class="p-button-raised p-button-rounded p-button-warning"
+        (click)="cambiarNombre()"
+      ></button>
+    </p-fieldset>
+  </div>
+
+  <div class="col md-6">
+    <p-fieldset legend="I18nPlural" [toggleable]="true">
+      <p>
+        {{ clientes.length | i18nPlural: clientesMapping }}
+      </p>
+      <button
+        pButton
+        type="button"
+        label="Borrar cliente"
+        class="p-button-raised p-button-rounded p-button-danger"
+        (click)="borrarCliente()"
+      ></button>
+    </p-fieldset>
+  </div>
+
+  <div class="col md-6">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of persona | keyvalue">
+           <b>{{item.key | titlecase}}:</b> {{item.value}}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+</div>
